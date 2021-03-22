@@ -1,0 +1,56 @@
+{
+    "students": [
+        {
+            "_id": 1,
+            "first_name": "Harerimana",
+            "last_name": "Egide",
+            "email": "egideharerimana085@gmail.com",
+            "class_id": 3
+        },
+        {
+            "_id": 2,
+            "first_name": "Abizera",
+            "last_name": "Oreste",
+            "email": "oreste@gmail.com",
+            "class_id": 2
+        },
+        {
+            "_id": 3,
+            "first_name": "Twizeyimana",
+            "last_name": "Jacques",
+            "email": "jacques@gmail.com",
+            "class_id": 1
+        },
+        {
+            "_id": 4,
+            "first_name": "Sekata",
+            "last_name": "Moss",
+            "email": "moss@gmail.com",
+            "class_id": 3
+        },
+        {
+            "_id": 5,
+            "first_name": "Manzi",
+            "last_name": "Gustav",
+            "email": "gustav@gmail.com",
+            "class_id": 2
+        }
+    ],
+    "classes": [
+        {
+            "_id": 1,
+            "name": "A",
+            "desc": "Class A"
+        },
+        {
+            "_id": 2,
+            "name": "B",
+            "desc": "Class B"
+        },
+        {
+            "_id": 3,
+            "name": "C",
+            "desc": "Class C"
+        }
+    ]
+}
