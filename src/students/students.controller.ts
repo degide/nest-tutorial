@@ -6,20 +6,20 @@ import {
     Param
 } from '@nestjs/common';
 import {Response} from 'express'
+import {StudentsService} from './students.service'
 
-import {students, classes} from '../db/db.json'
 
 @Controller("students")
 export class StudentsController {
-
+    constructor(private students: StudentsService){}
     @Get("")
     getAll(@Res() res:Response): Response{
-        return res.status(HttpStatus.OK).send(students)
+        return res.status(HttpStatus.OK).send(this.students.getAll())
     }
 
     @Get("/:id")
     getById(@Param() params: object,@Res() res:Response): Response{
-        let student = students.find(student=> (student._id==params["id"]));
+        let student = this.students.getAll().find(student=> (student._id==params["id"]));
         if(!student) return res.status(HttpStatus.NOT_FOUND).send({message: "STUDENT NOT FOUND"});
         return res.status(HttpStatus.OK).send({success: true, student})
     }
